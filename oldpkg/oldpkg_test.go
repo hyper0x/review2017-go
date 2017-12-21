@@ -2,6 +2,7 @@ package oldpkg
 
 import (
 	"testing"
+
 	"github.com/hyper0x/review2017-go/newpkg"
 )
 
@@ -11,9 +12,7 @@ func TestOldType(t *testing.T) {
 	case newpkg.NewType:
 		t.Logf("The type of 'old' is equal to '%T'.", old)
 	default:
-		t.Errorf("The type of old '%s' is not conform to the rules", tt)
+		t.Errorf("The type of 'old' is not conform to the rules: %T", tt)
 
 	}
 }
-
-

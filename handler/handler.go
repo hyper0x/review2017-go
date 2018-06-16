@@ -1,8 +1,8 @@
 package handler
 
 import (
-	"github.com/hyper0x/review2017-go/newpkg"
 	"fmt"
+	"github.com/hyper0x/review2017-go/newpkg"
 )
 
 func HandleXXX(obj newpkg.NewType) {

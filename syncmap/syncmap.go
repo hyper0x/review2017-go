@@ -13,7 +13,7 @@ type SyncMap interface {
 
 // simpleSyncMap 为一个基于读写锁的并发安全字典的实现。
 type simpleSyncMap struct {
-	m map[interface{}]interface{}
+	m  map[interface{}]interface{}
 	mu sync.RWMutex
 }
 
@@ -60,7 +60,6 @@ func (m *simpleSyncMap) Range(f func(key, value interface{}) bool) {
 	}
 	m.mu.Unlock()
 }
-
 
 // NewSimpleSyncMap 用于创建并返回一个基于读写锁的并发安全字典。
 func NewSimpleSyncMap() SyncMap {
